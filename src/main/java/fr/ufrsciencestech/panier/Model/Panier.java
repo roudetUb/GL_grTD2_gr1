@@ -127,13 +127,28 @@ public class Panier extends Observable {
         int i = 0;
         while(i < getTaille()-1){
             tmp += getFruits().get(i).getClass().getSimpleName();
-            tmp += ", ";
+            tmp += getFruits().get(i).getPrix()+"€ ,";
             i++;
         }
         if(estVide())
             tmp += "]";
         else
-            tmp += getFruits().get(getFruits().size()-1).getClass().getSimpleName() + "]";
+            tmp += getFruits().get(getFruits().size()-1).getClass().getSimpleName() + ""+getFruits().get(getFruits().size()-1).getPrix()+"€ ]";
+        return tmp;
+    }
+    
+    public String toStringAffichage(){
+        String tmp = "[";
+        int i = 0;
+        while(i < getTaille()-1){
+            tmp += getFruits().get(i).getClass().getSimpleName();
+            tmp += getFruits().get(i).getPrix()+"€ \n";
+            i++;
+        }
+        if(estVide())
+            tmp += "]";
+        else
+            tmp += getFruits().get(getFruits().size()-1).getClass().getSimpleName() + ""+getFruits().get(getFruits().size()-1).getPrix()+"€ ]";
         return tmp;
     }
         

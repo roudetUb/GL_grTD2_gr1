@@ -21,6 +21,8 @@ public class VueGraphiqueSimple extends JFrame implements VueGraphique {
     private final JButton inc;
     private final JButton dec;
     private JLabel affiche;
+    
+    
     /**
      * @return the inc
      */
@@ -42,12 +44,7 @@ public class VueGraphiqueSimple extends JFrame implements VueGraphique {
         return affiche;
     }
 
-    /**
-     * @param affiche the affiche to set
-     */
-    public void setAffiche(JLabel affiche) {
-        this.affiche = affiche;
-    }
+    
 
     public VueGraphiqueSimple(){
         super("Panier");
