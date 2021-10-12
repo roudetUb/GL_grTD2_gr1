@@ -50,9 +50,11 @@ public class TestMVC {
         p.addObserver(vuec);
         
         //une vue graphique simple abonnee au panier :
-        VueGraphiqueSimple vueg = new VueGraphiqueSimple();
+        //VueGraphiqueSimple vueg = new VueGraphiqueSimple();
+        VueGraphiqueComplexe vueg = new VueGraphiqueComplexe();
         //VueGraphiqueSimpleAWT vueg = new VueGraphiqueSimpleAWT();
-        Controleur cs = new ControleurSimple();
+        //Controleur cs = new ControleurSimple();
+        Controleur cs = new ControleurComplexe();
         cs.setPanier(p);
         p.addObserver(vueg);
         vueg.addControleur(cs);
