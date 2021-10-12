@@ -6,6 +6,7 @@
 package fr.ufrsciencestech.panier.Controler;
 
 
+import fr.ufrsciencestech.panier.Model.Ananas;
 import fr.ufrsciencestech.panier.Model.Fruit;
 import fr.ufrsciencestech.panier.Model.Orange;
 import fr.ufrsciencestech.panier.Model.PanierPleinException;
@@ -30,10 +31,17 @@ public class ControleurComplexe extends Controleur{
     
     @Override
     public void actionPerformed(ActionEvent e){       
+        Fruit f;
+        if(this.fruitActuelle.equals("Orange") ) {
+            f= new Orange();
+        }
+        else {
+            f= new Ananas();
+        }
         if(((Component)e.getSource()).getName().equals("Plus"))
             try {
               
-                p.ajoute();
+                p.ajoute(f);
         } catch (PanierPleinException ex) {
             //JOptionPane.showMessageDialog(null, "Panier plein", "Erreur", JOptionPane.ERROR_MESSAGE);
         }
