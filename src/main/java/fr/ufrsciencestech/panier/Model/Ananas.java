@@ -5,7 +5,7 @@
 package fr.ufrsciencestech.panier.Model;
 
 
-public class Ananas implements Fruit{
+public class Ananas extends FruitSimple implements Fruit{
     private double prix;
     private String origine;
 
@@ -28,35 +28,13 @@ public class Ananas implements Fruit{
             this.origine = origine;   
     }
 
-    public double getPrix(){
-	return prix;
-    }
-
-    public void setPrix(double prix){
-	this.prix=prix;
-    }
-
-    public String getOrigine(){
-	return origine;
-    }
  
-    public void setOrigine(String origine){
-	this.origine=origine;
-    }
 
     @Override
     public String toString(){
         return "Ananas de " + origine + " coutant " + prix + " euros";
     }
 
-    @Override
-    public boolean equals(Object o){  //predicat pour tester si 2 Ananass sont equivalentes
-        if(o != null && getClass() == o.getClass()){
-            Ananas or = (Ananas) o;
-            return (prix == or.prix && origine.equals(or.origine));
-        }
-        return false;
-    }
 
 
     public boolean isSeedless() {  //predicat indiquant qu'un Ananas n'a pas de pepins
