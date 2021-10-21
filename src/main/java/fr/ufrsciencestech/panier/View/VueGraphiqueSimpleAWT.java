@@ -85,4 +85,6 @@ public class VueGraphiqueSimpleAWT extends Frame implements VueGraphique{
         getInc().addActionListener(c);
         getDec().addActionListener(c);
     }
+    
+    
 }

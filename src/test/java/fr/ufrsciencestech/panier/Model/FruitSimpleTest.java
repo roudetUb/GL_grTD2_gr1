@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
  * @author id500182
  */
 public abstract class FruitSimpleTest {
-    
+    /*
     public FruitSimpleTest() {
     }
     abstract FruitSimple createFruit(double prix,String origine);
@@ -95,5 +95,5 @@ public abstract class FruitSimpleTest {
     // The methods must be annotated with annotation @Test. For example:
     //
     // @Test
-    // public void hello() {}
+    // public void hello() {}*/
 }

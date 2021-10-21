@@ -5,7 +5,7 @@
 package fr.ufrsciencestech.panier.Model;
 
 
-public class Ananas extends FruitSimple implements Fruit{
+public class Ananas  implements Fruit{
     private double prix;
     private String origine;
 
@@ -39,6 +39,24 @@ public class Ananas extends FruitSimple implements Fruit{
 
     public boolean isSeedless() {  //predicat indiquant qu'un Ananas n'a pas de pepins
         return true;
+    }
+
+    @Override
+    public double getPrix() {
+        return this.prix;
+    }
+
+    @Override
+    public String getOrigine() {
+        return this.origine;
+    }
+
+    public void setPrix(double prix) {
+        this.prix = prix;
+    }
+
+    public void setOrigine(String origine) {
+        this.origine = origine;
     }
 
 

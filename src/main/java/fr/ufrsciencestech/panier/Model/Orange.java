@@ -4,7 +4,7 @@ package fr.ufrsciencestech.panier.Model;
  *
  * @author roudet
  */
-public class Orange extends FruitSimple implements Fruit {
+public class Orange implements Fruit {
     private double prix;
     private String origine;
 	
@@ -43,4 +43,24 @@ public class Orange extends FruitSimple implements Fruit {
         //Ecrire ici vos tests
 	//System.out.println("premier test Orange");
    }*/
+
+    @Override
+    public double getPrix() {
+        return this.prix;
+    }
+
+    @Override
+    public String getOrigine() {
+        return this.origine;
+    }
+
+    public void setPrix(double prix) {
+        this.prix = prix;
+    }
+
+    public void setOrigine(String origine) {
+        this.origine = origine;
+    }
+    
+    
 }

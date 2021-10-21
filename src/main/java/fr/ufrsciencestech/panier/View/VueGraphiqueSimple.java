@@ -75,4 +75,10 @@ public class VueGraphiqueSimple extends JFrame implements VueGraphique {
         getInc().addActionListener(c);
         getDec().addActionListener(c);
     }
+
+    public void setAffiche(JLabel affiche) {
+        this.affiche = affiche;
+    }
+    
+    
 }
